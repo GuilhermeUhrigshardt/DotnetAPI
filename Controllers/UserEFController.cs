@@ -18,7 +18,7 @@ public class UserEFController : ControllerBase
     {
         _userRepository = userRepository;
         _mapper = new Mapper(new MapperConfiguration(cfg =>
-            cfg.CreateMap<UserAddDTO, User>()));
+            cfg.CreateMap<UserAddDto, User>()));
     }
 
     [HttpGet("GetSingleUser/{userId}")]
@@ -57,7 +57,7 @@ public class UserEFController : ControllerBase
     }
 
     [HttpPost("AddUser")]
-    public IActionResult AddUser(UserAddDTO user)
+    public IActionResult AddUser(UserAddDto user)
     {
         User userDb = _mapper.Map<User>(user);
 

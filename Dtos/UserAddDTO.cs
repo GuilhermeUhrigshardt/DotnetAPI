@@ -1,6 +1,6 @@
 namespace DotnetAPI.Dtos;
 
-public partial class UserAddDTO
+public partial class UserAddDto
 {
     public string FirstName { get; set; } = "";
     public string LastName { get; set; } = "";
